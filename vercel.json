@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build",
+  "buildCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build",
   "installCommand": "npm install",
   "outputDirectory": "public",
   "functions": {
@@ -32,12 +32,22 @@
     }
   ],
   "env": {
+    "APP_NAME": "Info Beasiswa",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
+    "APP_KEY": "base64:XDF/mK92ybqFklDsJUmG3AB38tPyo+Xz6EySaiWqlvQ=",
     "APP_CONFIG_CACHE": "/tmp/config.php",
-    "VIEW_COMPILED_PATH": "/tmp",
+    "APP_EVENTS_CACHE": "/tmp/events.php",
+    "APP_PACKAGES_CACHE": "/tmp/packages.php",
+    "APP_ROUTES_CACHE": "/tmp/routes.php",
+    "APP_SERVICES_CACHE": "/tmp/services.php",
+    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
-    "LOG_CHANNEL": "stderr"
+    "LOG_CHANNEL": "stderr",
+    "DB_CONNECTION": "sqlite",
+    "DB_DATABASE": "/tmp/database.sqlite",
+    "STORAGE_PATH": "/tmp/storage",
+    "LOG_DEPRECATIONS_CHANNEL": "null"
   }
 }
